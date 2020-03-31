@@ -1,0 +1,340 @@
+/* GLOBAL */
+@font-face {
+	font-family: "Rabbit";
+	src: url("../fonts/QuentinPro.otf");
+}
+
+* {
+    box-sizing: border-box;
+    outline: 0; /*supprime les pointillés résiduels après un clic sur un lien*/
+    transition: all 0.4s ease 0s;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: #444;
+    color: white;
+	font-family: "Open Sans", arial, sans-serif;
+	font-size: 1.6rem;
+	line-height: 2;
+}
+
+.orange {
+	color: #FF9D00;
+}
+
+/* HEADER */
+header {
+	background: linear-gradient(180deg, white 0%, white 56%, #333 56%, #333 100%);
+	/* background: linear-gradient(162deg, white 50%, #333 50%); */ /*Autre façon plus concise de l'écrire*/
+    box-shadow: 0 0 25px rgba(0,0,0,0.2);
+    margin:30px 30px 0;
+    padding: 25px;
+}
+
+header img {
+    width:100%;
+    margin-bottom: 25px;
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    font-family: "Rabbit", arial, sans-serif;
+	line-height: 1.5;
+	text-align: right;
+}
+
+header nav a {
+	color: white;
+	font-size: 2.5rem;
+    padding: 10px;
+    text-decoration: none;
+}
+
+header nav a:hover {
+	color: #FF9D00;
+}
+
+/* MAIN INDEX */
+main{
+    margin: 0 30px;
+}
+
+main h1, main h2, main h3 {
+	font-family: "Rabbit", arial, sans-serif;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+main h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+
+main h1 span{
+    letter-spacing: 5px;
+    text-transform: none;
+}
+
+/*section clothing*/
+main h2 {
+    border-left: 3px solid rgba(0, 0, 0, 0.075);
+	border-top: 3px solid rgba(0, 0, 0, 0.075);
+	font-size: 3rem;letter-spacing: 1px;
+	margin: 50px 0 25px;
+	padding: 10px 30px;
+}
+
+main .clothing article {
+    background-color: white;
+    color: #666;
+    margin-bottom:35px;
+    padding: 20px;
+	text-align: center;
+}
+
+main .clothing article img{
+	width: 100%;
+}
+
+main .clothing h3 {
+    border-bottom: 2px solid  #FF9D00;
+    color:  #FF9D00;
+	font-weight: normal;
+    font-size: 2.5rem;
+    margin: 20px 0;
+}
+
+main .clothing a {
+    background-color: #FF9D00;
+    color: #fff;
+    display: block;
+    margin-top: 10px;
+	padding: 10px;
+    text-decoration: none;
+    width: 100%;
+}
+
+main .clothing article a:hover{
+    background-color: #e58a02;
+}
+
+/*section media*/
+main .media article {
+    text-align: center;
+}
+
+main .media article i {
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color:#fff;
+    display: block;
+    font-size: 5rem;
+    height: 70px;
+    margin: 0 auto 50px;
+    padding: 10px;
+    width: 70px;
+}
+
+main .media article i:hover {
+    background-color: #FF9D00;
+    border: 1px solid #FF9D00;
+}
+
+main .media article i:first-of-type {
+    margin-top: 50px;
+}
+
+main .media video{
+    display: none;
+    width:100%;
+}
+
+/*"section" maps*/
+main .maps{
+    display: none;
+    margin-top: 50px;
+}
+
+main .maps iframe{
+    border: 0;
+    height: 450px;
+    width: 100%;
+}
+
+/* FOOTER */
+footer {
+    box-shadow: 0 0 25px rgba(0,0,0,0.2);
+	color: rgba(255,255,255,0.75);
+	margin: 50px 30px 30px;
+	padding: 50px;
+	text-align: center;
+}
+
+footer h2{
+    font-family: "Rabbit", arial, sans-serif;
+    text-transform: uppercase;
+}
+
+footer a{ /*tous les lien du footer y compris ceux de la nav*/
+    color: white;
+}
+
+footer nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer nav a{
+    padding: 15px 10px;
+    flex-basis: 50%;
+}
+
+footer img {
+    width: 50px;
+}
+
+/*ANIMATION*/
+@keyframes bounce{ /*déclaration de l'animation. On lui donne un nom et on construit l'animation*/
+	from{
+        transform :translateY(0);
+    }
+    to{
+        transform :translateY(-20px);
+    }
+}
+
+/* MEDIA QUERIES */
+/*360px*/
+@media screen and (min-width: 360px){ 
+    header img{
+        width: 250px; /*Force l'image à 250px à partir de 360px et supérieur*/
+    }
+}
+
+/*600px*/
+@media screen and (min-width: 600px){ 
+    footer nav a { /*petit ajustement au niveau des balises <a> dans la nav du footer, pour qu'elles se mettent en ligne*/
+        padding: 15px;
+        flex-basis: auto; /*Pour cela on force le flex-basis de chaque items à passer en auto*/
+    }
+}
+
+/*660px*/
+@media screen and (min-width: 660px){
+    header {
+        background: linear-gradient(90deg, white 0%, white 50%, #333 50%, #333 100%);
+    }
+}
+
+/*TABLET 768px*/
+@media screen and (min-width: 768px){
+    /* HEADER */
+    header {
+        background: linear-gradient(130deg, white 0%, white 50%, #333 50%, #333 100%);
+    }
+
+    header img{
+        margin-bottom: 0;
+    }
+
+    header .flex-header{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* MAIN INDEX */
+    /*section clothing*/
+    main .clothing > div{ /*On vise uniquement la <did> directement enfant de l'élément ayant pour class="clothing"*/
+        display: flex;
+        flex-wrap: wrap; /*On force le retour à la ligne des items*/
+        justify-content: space-between;
+    }
+
+    main .clothing article {
+        flex-basis: 48%;
+    }
+
+    /*section media*/
+    main .media video{
+        display: block;
+    }
+
+    /*section maps*/
+    main .maps{
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1025px){ /*s'applique à partir de 1025px et supérieur*/
+    .container {
+        margin: 0 auto;
+        max-width: 1500px;
+    }
+
+    /*HEADER*/
+    header img:hover{
+        transform: rotate(15deg);
+    }
+
+    header nav a:hover{
+        transform: translateY(10px);
+    }
+    
+    /* MAIN INDEX */
+    /*section clothing*/
+    main .clothing > div{
+        display: flex;
+        flex-wrap: nowrap; /*On annule le wrap appliqué plus haut dans le media query 768px*/
+        justify-content: space-between;
+    }
+
+    main .clothing article {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 23%;
+        justify-content: space-between;
+    }
+
+    main .clothing article:hover {
+        box-shadow: 0 0 15px 0 rgba(0,0,0,1);
+        transform: scale(1.1);
+    }
+
+    main .clothing article:first-of-type {
+        margin-left: 0;
+    }
+
+    main .clothing article:last-of-type {
+        margin-right: 0;
+    }
+
+    /*section media*/
+    main .media div{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    main .media article {
+        padding-right: 25px;
+        text-align: left;
+    }
+
+    main .media article i {
+        display: inline-block;
+        margin: 0 50px 0 0; 
+    }
+
+    main .media article i:hover {
+        animation: bounce 0.35s ease infinite alternate; /*appel de l'annimation*/
+    }
+}
