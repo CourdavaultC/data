@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html id="top" lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Initiation à bootstrap</title>
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <!-- fontawesome icons-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        
+        <!--Simple line icons-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+
+        <!--Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body class="bg-light">
+        <header id="header" class="bg-light header-fixed">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+                    <a class="navbar-brand" href="#"><i class="fas fa-home"></i> Start Bootstrap</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse w-50" id="navbarNavAltMarkup">
+                        <div class="navbar-nav w-100 justify-content-between">
+                            <a class="nav-item nav-link" href="#features"><i class="fas fa-check-square"></i> Options <span class="sr-only">(current)</span></a>
+                            <a class="nav-item nav-link" href="#fully"><i class="fas fa-cog"></i> Conception</a>
+                            <a class="nav-item nav-link" href="#testimonials"><i class="fas fa-comments"></i> Témoignages</a>
+                            <a class="nav-item nav-link" href="#signin-bottom"><i class="fas fa-user-plus"></i> S'inscrire</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section id="signin" class="signin text-white text-center">
+                <div class="container">
+                    <h1 class="mx-auto mb-5 px-3">Construisez une page de destination pour votre entreprise&nbsp;!</h1>
+                    <div class="row">
+                        <form class="form-inline mx-auto px-3">
+                            <div class="form-group mx-sm-3 mb-2 text-center">
+                                <label for="inputMail" class="sr-only">Password</label>
+                                <input type="email" class="form-control" id="inputMail" placeholder="Saisissez votre email...">
+                            </div>
+                            <button type="submit" class="btn btn-primary mb-2">S'inscrire</button>
+                        </form>
+                        
+                    </div>
+                </div>
+            </section>
+
+            <section id="features" class="features text-center">
+                <div class="container">
+                    <h2 class="text-center mb-5">Les options</h2>
+                    <div class="row">
+                        <article class="col-lg-4 mb-5 mb-lg-0">
+                            <i class="icon-screen-desktop d-block mx-auto mb-3 text-primary"></i>
+                            <h3>Entièrement responsive</h3>
+
+                            <p class=" mb-lg-0">
+                                    Ce thème aura fière allure sur tout appareil, peu importe la taille&nbsp;!
+                            </p>
+                        </article>
+
+                        <article class="col-lg-4 mb-5 mb-lg-0">
+                            <i class="icon-layers d-block mx-auto mb-3 text-primary"></i>
+                            <h3>Avec Bootstrap&nbsp;4</h3>
+
+                            <p class=" mb-lg-0">
+                                Avec la dernière version du nouveau framework Bootstrap&nbsp;4&nbsp;!
+                            </p>
+                        </article>
+
+                        <article class="col-lg-4 mb-5 mb-lg-0">
+                            <i class="icon-check d-block mx-auto mb-3 text-primary"></i>
+                            <h3>Facile à utiliser</h3>
+
+                            <p class=" mb-lg-0">
+                                Prêt à utiliser avec votre propre contenu, ou personnaliser les fichiers source&nbsp;!
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <div id="fully" class="container-fluid bg-white">
+                <article class="fully">
+                    <div class="row">
+                        <div class="col-lg-6 bg-showcase order-lg-1">
+                        </div>
+
+                        <div class="col-lg-6 my-auto">
+                            <h2>Conception entièrement réactive</h2>
+
+                            <p class="lead mb-0">
+                                Lorsque vous utilisez un thème créé par Start Bootstrap, vous savez que le thème aura fière allure sur tout appareil, qu'il s'agisse d'un téléphone, d'une tablette ou d'un ordinateur de bureau, la page s'adaptera automatiquement&nbsp;!
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <section id="testimonials" class="testimonials text-center">
+                <div class="container">
+                    <h2 class="mb-5">Ce que les gens en disent...</h2>
+
+                    <div class="row">
+                        <article class="col-lg-4">
+                            <figure class="mx-auto mb-5 mb-lg-0">
+                                <img class="img-fluid rounded-circle mb-3" src="img/testimonials-1.jpg" alt="Margaret E.">
+                                <figcaption>
+                                    <h3 class="h3">Isabelle E.</h3>
+                                    <p>&laquo; C'est fantastique&nbsp;! Merci beaucoup les gars&nbsp;!&nbsp;&raquo;</p>
+                                </figcaption>
+                            </figure>
+                        </article>
+
+                        <article class="col-lg-4">
+                            <figure class="mx-auto mb-5 mb-lg-0">
+                                <img class="img-fluid rounded-circle mb-3" src="img/testimonials-2.jpg" alt="Fred S.">
+                                <figcaption>
+                                    <h3 class="h3">Fred S.</h3>
+                                    <p>&laquo; Bootstrap est incroyable. Je l'utilise pour créer plein de pages de destination super sympas.&nbsp;&raquo;</p>
+                                </figcaption>
+                            </figure>
+                        </article>
+
+                        <article class="col-lg-4">
+                            <figure class="mx-auto mb-5 mb-lg-0">
+                                <img class="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="Sarah W.">
+                                <figcaption>
+                                    <h3 class="h3">Sarah W.</h3>
+                                    <p>&laquo; Merci beaucoup d'avoir mis ces ressources gratuites à notre disposition&nbsp;!&nbsp;&raquo;</p>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section id="signin-bottom" class="signin signin-bottom text-white text-center">
+                <div class="container">
+                    <h2 class="h2 mx-auto mb-5 px-3">Prêt à commencer&nbsp;? S'inscrire maintenant&nbsp;!</h2>
+                    <div class="row">
+                        <form class="form-inline mx-auto px-3">
+                            <div class="form-group mx-sm-3 mb-2 text-center">
+                                <label for="inputMail" class="sr-only">Password</label>
+                                <input type="email" class="form-control" id="inputMail" placeholder="Saisissez votre email...">
+                            </div>
+                            <button type="submit" class="btn btn-primary mb-2">S'inscrire</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer id="footer" class="my-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <nav class="text-center text-lg-left mb-2">
+                            <a href="#">A propos</a> <span class="mx-3">⋅</span>
+                            <a href="#">Contact</a> <span class="mx-3">⋅</span>
+                            <a href="#">CGU</a> <span class="mx-3">⋅</span>
+                            <a href="#">Condidentialité</a>
+                        </nav>
+                        <p class="text-center text-lg-left mb-lg-0"><small>&copy; Votre site 2019. Tous droits réservés.</small></p>
+                    </div>
+
+                    <div class="col-lg-6 ">
+                        <div class="social text-center text-lg-right">
+                            <a href="#"><i class="fab fa-facebook fa-2x fa-fw mr-4"></i></a>
+                            <a href="#"><i class="fab fa-twitter fa-2x fa-fw"></i></a>
+                            <a href="#"><i class="fab fa-linkedin fa-2x fa-fw ml-4"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!--Script Bootstrap-->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+</html>

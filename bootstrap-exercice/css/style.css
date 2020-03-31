@@ -1,0 +1,204 @@
+/*Extra small*/
+/********************************************************
+CSS COMMUM
+********************************************************/
+*{
+    outline: none;
+    transition: all 0.5s ease 0s;
+}
+
+body{
+    color: #212529;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    padding:0.001px /*Astuce pour ne pas que le margin-top de la section signin ne déborde du body*/
+}
+
+.h1, h1{
+    font-size: 2.5rem;
+}
+
+h1{
+    hyphens: auto;
+}
+
+.h3, h3{
+    font-weight: 500; 
+    font-size: 1.5rem;
+}
+
+
+/********************************************************
+FIN CSS COMMUM
+********************************************************/
+
+
+/********************************************************
+CSS HEARDER ET NAV
+********************************************************/
+.header-fixed{ /*Fixe le header*/
+    box-shadow: 0 2px 5px 0px rgba(0,0,0,.5);
+    left: 0;
+    right: 0;
+    top:0;
+    position: fixed;
+    z-index: 100;
+}
+
+.navbar-light .navbar-brand{
+    margin-right: 5rem; /*Pour écarter vers la droite les autres balises <a> du menu*/
+}
+
+.navbar-light .navbar-brand:hover{
+    color: #0069d9;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #000;
+}
+
+.navbar-light .navbar-nav .nav-link i{
+    color: #0069d9;
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+    color: #0069d9;
+}
+
+.navbar-light .navbar-nav .nav-link:hover i{
+    color: #212529;
+}
+/********************************************************
+CSS HEARDER ET NAV
+********************************************************/
+
+
+/********************************************************
+CSS SECTION SIGNIN
+********************************************************/
+#signin{
+    margin-top: 56px; /*pour ne pas qie la section glisse de 56px sous le header (56px = à la hauteur du header)*/
+}
+
+.signin {
+    background: url("../img/bg-masthead.jpg") no-repeat center center;
+    background-size: cover;
+    padding: 128px 0;
+}
+/********************************************************
+FIN CSS SECTION SIGNIN
+********************************************************/
+
+
+/********************************************************
+CSS SECTION FEATURES
+********************************************************/
+#features{
+    padding: 128px 0
+}
+.features i[class^="icon-"]{
+    font-size: 5rem;
+}
+
+.features i[class^="icon-"]:hover{
+    transform:scale(1.1);
+}
+
+.features p{
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+/********************************************************
+FIN CSS SECTION FEATURES
+********************************************************/
+
+
+/********************************************************
+CSS ARTICLES FULLY UPDATE AND EASY
+********************************************************/
+.fully > div div:last-of-type{
+    padding: 45px;
+}
+
+.bg-showcase{
+    min-height: 455px;
+}
+
+.fully .bg-showcase{
+    background: url(../img/bg-showcase-1.jpg) no-repeat top left / cover;
+}
+/********************************************************
+CSS ARTICLES FULLY UPDATE AND EASY
+********************************************************/
+
+
+/********************************************************
+CSS SECTION TESTIMONIALS
+********************************************************/
+.testimonials {
+    padding: 128px 0
+}
+
+.testimonials figure img{
+    max-width: 192px;
+}
+
+.testimonials figure img:hover{
+    box-shadow: 0 8px 5px 0px rgba(0,0,0,0.5);
+    transform: scale(1.01);
+}
+
+.testimonials p{
+    font-weight: 300;
+}
+/********************************************************
+FIN CSS SECTION TESTIMONIALS
+********************************************************/
+
+
+/********************************************************
+CSS FOOTER
+********************************************************/
+/********************************************************
+FIN CSS FOOTER
+********************************************************/
+
+
+/********************************************************
+MEDIA QUERIES
+********************************************************/
+/*Small*/
+@media screen and (min-width: 576px){
+}
+
+/*Medium*/
+@media screen and (min-width: 768px){
+    .h1{
+        font-size: 3rem;
+    }
+
+    .signin{
+        padding: 192px 0;
+    }
+
+    .signin-bottom{
+        padding: 100px 0;
+    }
+
+    .fully > div div:last-of-type{
+        padding: 128px;
+    }
+}
+
+/*Large*/
+@media screen and (min-width: 992px){
+    h1{
+        hyphens: none;
+    }
+}
+
+/*Extra large*/
+@media screen and (min-width: 1200px){
+}
+/********************************************************
+FIN MEDIA QUERIES
+********************************************************/
