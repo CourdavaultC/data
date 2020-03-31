@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+ <link rel="stylesheet" href="css/style.css">
+ <title>ex : Diapo</title>
+</head>
+
+<body>
+
+ <div class="container">
+
+  <header>
+   <h1>Exercice slider</h1>
+   <nav>
+    <button id="slider-previous"><i class="fas fa-backward"></i></button>
+    <button id="slider-toggle"><i class="fas fa-play"></i></button>
+    <button id="slider-next"><i class="fas fa-forward"></i></button>
+    <button id="slider-random"><i class="fas fa-random"></i></button>
+
+   </nav>
+  </header>
+
+  <main>
+   <figure class="slider">
+    <img src="images/1.jpg">
+    <figcaption>Street Art</figcaption>
+   </figure>
+  </main>
+
+ </div>
+
+ <script src="js/utilities.js"></script>
+ <!-- <script src="js/main.js"></script> -->
+ <script>
+  
+  var slides =
+   [
+    { image: 'images/1.jpg', legend: 'Street Art' },
+    { image: 'images/2.jpg', legend: 'Fast Lane' },
+    { image: 'images/3.jpg', legend: 'Colorful Building' },
+    { image: 'images/4.jpg', legend: 'Skyscrapers' },
+    { image: 'images/5.jpg', legend: 'City by night' },
+    { image: 'images/6.jpg', legend: 'Tour Eiffel la nuit' },
+
+   ];
+
+  var index = 0;
+  var idInterval = -1; // diapo n'est pas lancé
+
+  var nextBtn = document.querySelector('button#slider-next');
+  var prevBtn = document.querySelector('button#slider-previous');
+  var playBtn = document.querySelector('button#slider-toggle');
+  var randBtn = document.querySelector('button#slider-random');
+  
+  var imageElt = document.querySelector('figure.slider img');
+  var titleElt = document.querySelector('figure.slider figcaption');
+  
+  
+  var icon = document.querySelector('button#slider-toggle i');
+
+
+  /*
+   nextImage()
+  */
+  function nextImage() {
+   // redéfinir la valeur d'index
+   index++; 
+   if (index > slides.length - 1) {
+    index = 0;
+   }
+   // Afficher l'image et titre suivant
+   imageElt.src = slides[index].image;   //"images/2.jpg" 
+   titleElt.textContent = slides[index].legend;  // "Fast Lane"
+  }
+
+  /*
+   previousImage()
+  */
+  function previousImage() {
+   index--; // -1
+
+   if (index < 0) {
+    index = slides.length - 1;
+   }
+
+   imageElt.src = slides[index].image;   //"images/2.jpg" 
+   titleElt.textContent = slides[index].legend;  // "Fast Lane"
+
+  }
+
+
+  function playPause() {
+    // PLAY
+    if(idInterval == -1) {
+    	// Le diapo n'est pas lancé > alors on le lance
+    	idInterval = setInterval(nextImage, 1000) // 12, 28, 54
+        // modifier l'aspect de l'icone
+        icon.classList.remove('fa-play');
+        icon.classList.add('fa-pause');
+    }
+    // PAUSE
+    else {
+    	// Le diapo est lancé > alors on le stoppe
+    	clearInterval(idInterval);
+        // modifier l'aspect de l'icone
+        icon.classList.remove('fa-pause');
+        icon.classList.add('fa-play');   
+    } 
+  }
+  
+  
+  function randomImage(event) {
+  	// 1 déterminer une valeur au hasard de index
+   	var randomIndex = getRandomIntInclusive(0, slides.length-1); // sort un nombre en 0 et 5
+   
+    while(randomIndex == index) {
+    	randomIndex = getRandomIntInclusive(0, slides.length-1);
+    }
+    
+    index = randomIndex;
+    
+    // 2 rafrâichir l'image et le texte du figcaption 
+   	imageElt.src = slides[index].image;   //"images/2.jpg" 
+   	titleElt.textContent = slides[index].legend;  // "Fast Lane"
+  }
+
+  function onKeyup(event) {
+   console.log(event.code); // "ArrowRight", "ArrowLeft", "KeyP", "KeyR"
+
+   switch(event.code) {
+    case "ArrowRight": 
+     nextImage();
+    break;
+    case "ArrowLeft": 
+     previousImage();
+    break;
+    case "KeyP": 
+     playPause();
+    break;
+    case "KeyR": 
+     randomImage();
+    break;
+    default: 
+     alert("Veuillez presser les touches <-, ->, p, r");
+    break;
+   }
+
+   /*
+   // si fleche droite est préssée > on execute nextImage
+   if (event.code == "ArrowRight") {
+    nextImage()
+   }
+   else if (event.code == "ArrowLeft") {
+    previousImage()
+   }
+   else if (event.code == "KeyP") {
+    playPause()
+   }
+   else if (event.code == "KeyR") {
+    randomImage()
+   }
+   else {
+    alert("Veuillez presser les touches <-, ->, p, r");
+   }
+   */
+  }
+  
+  
+  
+ 
+  nextBtn.addEventListener('click', nextImage);
+  prevBtn.addEventListener('click', previousImage);
+  playBtn.addEventListener('click', playPause);
+  randBtn.addEventListener('click', randomImage);
+  document.addEventListener('keyup', onKeyup);
+
+
+
+
+ </script>
+</body>
+
+</html>

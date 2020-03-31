@@ -1,0 +1,18 @@
+body{
+    font-family: 'Open Sans Condensed', sans-serif;
+    background-color: grey;
+}
+.container{
+    width:1000px;
+    margin: 20px auto;
+    text-align: center;
+
+}
+img{
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    rotate: -3deg;
+}
+
